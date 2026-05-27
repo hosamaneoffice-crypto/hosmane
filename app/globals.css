@@ -1,0 +1,219 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Graphite, champagne, and muted garnet luxury theme */
+  --background: oklch(0.105 0.012 255);
+  --foreground: oklch(0.94 0.01 82);
+  --card: oklch(0.155 0.015 255);
+  --card-foreground: oklch(0.94 0.01 82);
+  --popover: oklch(0.13 0.012 255);
+  --popover-foreground: oklch(0.94 0.01 82);
+  --primary: oklch(0.79 0.045 83);
+  --primary-foreground: oklch(0.12 0.012 255);
+  --secondary: oklch(0.23 0.025 252);
+  --secondary-foreground: oklch(0.94 0.01 82);
+  --muted: oklch(0.215 0.016 255);
+  --muted-foreground: oklch(0.7 0.018 82);
+  --accent: oklch(0.52 0.11 25);
+  --accent-foreground: oklch(0.96 0.01 82);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.95 0 0);
+  --border: oklch(0.28 0.025 255);
+  --input: oklch(0.17 0.015 255);
+  --ring: oklch(0.79 0.045 83);
+  --chart-1: oklch(0.79 0.045 83);
+  --chart-2: oklch(0.52 0.11 25);
+  --chart-3: oklch(0.55 0.045 252);
+  --chart-4: oklch(0.72 0.035 150);
+  --chart-5: oklch(0.64 0.065 315);
+  --radius: 0.5rem;
+  
+  /* Custom luxury colors */
+  --gold: oklch(0.79 0.045 83);
+  --gold-light: oklch(0.9 0.028 85);
+  --gold-dark: oklch(0.6 0.055 76);
+  --glass: rgba(235, 231, 220, 0.055);
+  --glass-border: rgba(235, 231, 220, 0.13);
+}
+
+.dark {
+  --background: oklch(0.105 0.012 255);
+  --foreground: oklch(0.94 0.01 82);
+  --card: oklch(0.155 0.015 255);
+  --card-foreground: oklch(0.94 0.01 82);
+  --popover: oklch(0.13 0.012 255);
+  --popover-foreground: oklch(0.94 0.01 82);
+  --primary: oklch(0.79 0.045 83);
+  --primary-foreground: oklch(0.12 0.012 255);
+  --secondary: oklch(0.23 0.025 252);
+  --secondary-foreground: oklch(0.94 0.01 82);
+  --muted: oklch(0.215 0.016 255);
+  --muted-foreground: oklch(0.7 0.018 82);
+  --accent: oklch(0.52 0.11 25);
+  --accent-foreground: oklch(0.96 0.01 82);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.95 0 0);
+  --border: oklch(0.28 0.025 255);
+  --input: oklch(0.17 0.015 255);
+  --ring: oklch(0.79 0.045 83);
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Geist', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-mono: 'Geist Mono', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background:
+      radial-gradient(circle at 20% 0%, rgba(120, 35, 46, 0.12), transparent 28rem),
+      radial-gradient(circle at 88% 16%, rgba(118, 132, 148, 0.12), transparent 26rem),
+      var(--background);
+  }
+  
+  /* Custom scrollbar for luxury feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: oklch(0.11 0.012 255);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.79 0.045 83 / 0.52);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.79 0.045 83 / 0.74);
+  }
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, oklch(0.92 0.025 85), oklch(0.79 0.045 83), oklch(0.52 0.11 25));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold glow effect */
+.gold-glow {
+  box-shadow: 0 0 28px oklch(0.79 0.045 83 / 0.24), 0 0 70px oklch(0.52 0.11 25 / 0.13);
+}
+
+/* Premium logo animations */
+@keyframes logoShine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px oklch(0.78 0.12 85 / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px oklch(0.79 0.045 83 / 0.55);
+  }
+}
+
+.logo-shine {
+  animation: logoShine 3s infinite;
+}
+
+.logo-pulse {
+  animation: logoPulse 2s ease-in-out infinite;
+}
+
+/* Enhanced glass effect with premium touch */
+.glass-premium {
+  background: rgba(205, 195, 176, 0.07);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(205, 195, 176, 0.16);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Luxury gradient text */
+.text-luxury-gradient {
+  background: linear-gradient(135deg, oklch(0.9 0.028 85), oklch(0.79 0.045 83), oklch(0.55 0.045 252), oklch(0.52 0.11 25));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Premium link hover effect */
+.nav-link-premium {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link-premium::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, oklch(0.79 0.045 83), transparent);
+  transition: width 0.3s ease;
+}
+
+.nav-link-premium:hover::after {
+  width: 100%;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}

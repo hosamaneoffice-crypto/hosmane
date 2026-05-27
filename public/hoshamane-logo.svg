@@ -1,0 +1,87 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="buildingGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4a845;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#c9973d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a67c3f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="roofGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e63946;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d62828;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Left Building -->
+  <g>
+    <polygon points="80,100 130,40 130,180 80,240" fill="url(#buildingGradient)" filter="url(#glow)"/>
+    <!-- Windows -->
+    <rect x="90" y="60" width="12" height="12" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="90" y="90" width="12" height="12" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="90" y="120" width="12" height="12" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="110" y="75" width="12" height="12" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="110" y="105" width="12" height="12" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="110" y="135" width="12" height="12" fill="#1a1a1a" opacity="0.7"/>
+  </g>
+  
+  <!-- Center Building (Tallest) -->
+  <g>
+    <polygon points="200,50 270,10 270,240 200,280" fill="url(#buildingGradient)" filter="url(#glow)"/>
+    <!-- Windows -->
+    <rect x="215" y="40" width="14" height="14" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="215" y="75" width="14" height="14" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="215" y="110" width="14" height="14" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="215" y="145" width="14" height="14" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="215" y="180" width="14" height="14" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="240" y="50" width="14" height="14" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="240" y="85" width="14" height="14" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="240" y="120" width="14" height="14" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="240" y="155" width="14" height="14" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="240" y="190" width="14" height="14" fill="#1a1a1a" opacity="0.7"/>
+  </g>
+  
+  <!-- Right Building -->
+  <g>
+    <polygon points="320,100 370,40 370,180 320,240" fill="url(#buildingGradient)" filter="url(#glow)"/>
+    <!-- Windows -->
+    <rect x="330" y="60" width="12" height="12" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="330" y="90" width="12" height="12" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="330" y="120" width="12" height="12" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="350" y="75" width="12" height="12" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="350" y="105" width="12" height="12" fill="#1a1a1a" opacity="0.7"/>
+    <rect x="350" y="135" width="12" height="12" fill="#1a1a1a" opacity="0.7"/>
+  </g>
+  
+  <!-- Roof Line with Glow -->
+  <g filter="url(#softGlow)">
+    <path d="M 60 210 Q 150 160 200 180 Q 250 200 300 170 Q 350 200 400 180 Q 450 160 480 210" 
+          fill="none" stroke="url(#roofGradient)" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Roof Solid -->
+  <g>
+    <path d="M 60 210 Q 150 160 200 180 Q 250 200 300 170 Q 350 200 400 180 Q 450 160 480 210" 
+          fill="none" stroke="url(#roofGradient)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Base/Foundation -->
+  <line x1="40" y1="240" x2="500" y2="240" stroke="url(#buildingGradient)" stroke-width="3" opacity="0.6"/>
+  
+  <!-- Accent Lines -->
+  <line x1="150" y1="240" x2="150" y2="250" stroke="url(#roofGradient)" stroke-width="2" opacity="0.5"/>
+  <line x1="250" y1="240" x2="250" y2="250" stroke="url(#roofGradient)" stroke-width="2" opacity="0.5"/>
+  <line x1="350" y1="240" x2="350" y2="250" stroke="url(#roofGradient)" stroke-width="2" opacity="0.5"/>
+</svg>
