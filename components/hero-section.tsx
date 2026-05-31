@@ -208,7 +208,7 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 px-4"
         >
           <motion.a
-            href="#properties"
+            href="/properties"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="w-full sm:w-auto px-5 sm:px-8 py-2.5 sm:py-4 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-full text-[11px] sm:text-sm font-semibold uppercase tracking-wider hover:bg-primary/90 transition-all duration-300 gold-glow relative group overflow-hidden"

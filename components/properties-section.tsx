@@ -7,46 +7,46 @@ import { Bed, Bath, Square, MapPin, ArrowRight, ChevronLeft, ChevronRight } from
 const properties = [
   {
     id: 1,
-    title: "Skyline Penthouse",
-    location: "Gottigere, Bangalore",
-    price: "Rs. 2.5 Cr",
+    title: "Pruthvi Royal",
+    location: "Gottigere, Bannerghatta Road",
+    price: "₹65 Lac",
     type: "Sale",
-    beds: 4,
-    baths: 3,
-    sqft: "3,500",
+    beds: 2,
+    baths: 2,
+    sqft: "1,154",
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop",
   },
   {
     id: 2,
-    title: "Garden Villa Estate",
-    location: "Himagiri Meadows",
-    price: "Rs. 1.8 Cr",
+    title: "Purva Panorama – 3 BHK",
+    location: "Kalena Agrahara Metro Station, Bannerghatta Road",
+    price: "₹1.85 Cr",
     type: "Sale",
     beds: 3,
     baths: 2,
-    sqft: "2,800",
+    sqft: "1,500",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
   },
   {
     id: 3,
-    title: "Modern City Apartment",
-    location: "MLA Layout",
-    price: "Rs. 45K/mo",
-    type: "Rent",
-    beds: 2,
-    baths: 2,
-    sqft: "1,200",
+    title: "Prestige White Meadows",
+    location: "Whitefield, Bangalore",
+    price: "₹11.5 Cr",
+    type: "Sale",
+    beds: 4,
+    baths: 5,
+    sqft: "6,651",
     image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
   },
   {
     id: 4,
-    title: "Luxury Duplex Home",
-    location: "Bannerghatta Road",
-    price: "Rs. 3.2 Cr",
+    title: "Himagiri Meadows Duplex",
+    location: "Bannerghatta Main Road",
+    price: "₹2.45 Cr",
     type: "Sale",
-    beds: 5,
-    baths: 4,
-    sqft: "4,200",
+    beds: 3,
+    baths: 3,
+    sqft: "1,600",
     image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
   },
 ]
@@ -209,7 +209,7 @@ export function PropertiesSection() {
           className="text-center mt-8"
         >
           <a
-            href="#contact"
+            href="/properties"
             className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full text-sm font-semibold uppercase tracking-wider hover:bg-primary/90 transition-all duration-300"
           >
             <span>View All Properties</span>

@@ -112,7 +112,7 @@ export function ImageSlider() {
                 {slides[currentIndex].subtitle}
               </p>
               <motion.a
-                href="#properties"
+                href="/properties"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-block mt-8 px-8 py-4 bg-primary text-primary-foreground rounded-full text-sm font-semibold uppercase tracking-wider hover:bg-primary/90 transition-all duration-300 gold-glow"
