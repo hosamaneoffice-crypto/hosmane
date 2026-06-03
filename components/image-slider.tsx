@@ -8,32 +8,46 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const slides = [
   {
     id: 1,
-    image: "/images/slide-1.jpg",
+    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&h=900&fit=crop",
     title: "Premium Apartments",
     subtitle: "Experience luxury living in Bangalore's finest residences",
     tag: "New Launch"
   },
   {
     id: 2,
-    image: "/images/slide-2.jpg",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&h=900&fit=crop",
     title: "Exclusive Villas",
     subtitle: "Spacious homes with world-class amenities",
     tag: "Featured"
   },
   {
     id: 3,
-    image: "/images/slide-3.jpg",
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1600&h=900&fit=crop",
     title: "Luxury Penthouses",
     subtitle: "Elevate your lifestyle with panoramic city views",
     tag: "Premium"
   },
   {
     id: 4,
-    image: "/images/slide-4.jpg",
+    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&h=900&fit=crop",
     title: "Commercial Spaces",
     subtitle: "Prime locations for your business growth",
     tag: "Investment"
-  }
+  },
+  {
+    id: 5,
+    image: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1600&h=900&fit=crop",
+    title: "Builder Floors",
+    subtitle: "Independent living with premium construction quality",
+    tag: "Hot Deal"
+  },
+  {
+    id: 6,
+    image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1600&h=900&fit=crop",
+    title: "Plots & Land",
+    subtitle: "Build your dream on prime Bannerghatta Road plots",
+    tag: "New Listing"
+  },
 ]
 
 export function ImageSlider() {

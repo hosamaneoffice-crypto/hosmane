@@ -2,30 +2,30 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin, Twitter } from "lucide-react"
+import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin, Twitter, MessageCircle } from "lucide-react"
 import { PremiumLogo } from "./premium-logo"
 
 const footerLinks = {
   services: [
-    { label: "Buy Property", href: "#properties" },
-    { label: "Rent Property", href: "#properties" },
-    { label: "Sell Property", href: "#contact" },
+    { label: "Buy Property", href: "/properties" },
+    { label: "Rent Property", href: "/properties" },
+    { label: "Sell Your Property", href: "#contact" },
     { label: "Property Management", href: "#services" },
     { label: "Investment Advisory", href: "#services" },
   ],
   company: [
     { label: "About Us", href: "#about" },
-    { label: "Our Team", href: "#about" },
-    { label: "Testimonials", href: "#testimonials" },
-    { label: "Contact", href: "#contact" },
-    { label: "Careers", href: "#contact" },
+    { label: "Our Story", href: "#about" },
+    { label: "Client Reviews", href: "#testimonials" },
+    { label: "Contact Us", href: "#contact" },
+    { label: "Book a Site Visit", href: "#contact" },
   ],
   locations: [
-    { label: "Gottigere", href: "#properties" },
-    { label: "Bannerghatta Road", href: "#properties" },
-    { label: "Electronic City", href: "#properties" },
-    { label: "JP Nagar", href: "#properties" },
-    { label: "BTM Layout", href: "#properties" },
+    { label: "Gottigere", href: "/properties" },
+    { label: "Bannerghatta Road", href: "/properties" },
+    { label: "Whitefield", href: "/properties" },
+    { label: "Hulimavu", href: "/properties" },
+    { label: "Meenakshi Layout", href: "/properties" },
   ],
 }
 
@@ -38,12 +38,13 @@ const socialLinks = [
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
+  const whatsappLink = `https://wa.me/919900797419?text=${encodeURIComponent("Hello Manjunath! I'd like to know more about your property listings.")}`
 
   return (
     <footer className="relative pt-24 pb-8 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#05070a] via-background to-background" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
@@ -60,36 +61,63 @@ export function Footer() {
               </Link>
 
               <p className="text-muted-foreground mb-6 max-w-sm leading-relaxed">
-                Your trusted partner for premium real estate in Bangalore. 
-                Experience luxury living with exceptional service.
+                Hosamane Properties — Bangalore's trusted name in premium real estate for over 15 years.
+                We help families find their perfect home and investors discover the right opportunity.
               </p>
 
               {/* Contact Info */}
               <div className="space-y-3">
-                <motion.a 
-                  href="tel:+919900797419" 
+                <motion.a
+                  href="tel:+919900797419"
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
                 >
-                  <Phone className="w-4 h-4" />
-                  <span>+91 99007 97419</span>
+                  <Phone className="w-4 h-4 flex-shrink-0" />
+                  <div>
+                    <span className="block text-xs text-muted-foreground/60 mb-0.5">Manjunath</span>
+                    <span>+91 99007 97419</span>
+                  </div>
                 </motion.a>
-                <motion.a 
-                  href="mailto:info@hosamaneproperties.com" 
+                <motion.a
+                  href="tel:+919008910419"
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
                 >
-                  <Mail className="w-4 h-4" />
+                  <Phone className="w-4 h-4 flex-shrink-0" />
+                  <div>
+                    <span className="block text-xs text-muted-foreground/60 mb-0.5">Manjunath</span>
+                    <span>+91 90089 10419</span>
+                  </div>
+                </motion.a>
+                <motion.a
+                  href="mailto:info@hosamaneproperties.com"
+                  whileHover={{ x: 5 }}
+                  className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Mail className="w-4 h-4 flex-shrink-0" />
                   <span>info@hosamaneproperties.com</span>
                 </motion.a>
-                <motion.div 
+                <motion.div
                   whileHover={{ x: 5 }}
                   className="flex items-start gap-3 text-muted-foreground"
                 >
                   <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span>MLA Layout Main Rd, Himagiri Meadows, Gottigere, Bengaluru - 560076</span>
+                  <span>MLA Layout Main Rd, Himagiri Meadows, Gottigere, Bengaluru – 560076</span>
                 </motion.div>
               </div>
+
+              {/* WhatsApp CTA */}
+              <motion.a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 bg-green-500/10 border border-green-500/30 text-green-400 rounded-full text-sm font-medium hover:bg-green-500/20 transition-colors"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Chat on WhatsApp
+              </motion.a>
             </motion.div>
           </div>
 
@@ -104,8 +132,8 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
@@ -126,8 +154,8 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
@@ -144,12 +172,12 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg font-semibold text-foreground mb-6">Locations</h4>
+            <h4 className="text-lg font-semibold text-foreground mb-6">Areas We Cover</h4>
             <ul className="space-y-3">
               {footerLinks.locations.map((link) => (
                 <li key={link.label}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
@@ -170,9 +198,9 @@ export function Footer() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-sm text-muted-foreground"
+            className="text-sm text-muted-foreground text-center md:text-left"
           >
-            © {currentYear} Hoshamane Properties. All rights reserved.
+            © {currentYear} Hosamane Properties. All rights reserved. &nbsp;·&nbsp; Bangalore, Karnataka
           </motion.p>
 
           {/* Social Links */}

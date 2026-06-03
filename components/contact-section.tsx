@@ -40,6 +40,12 @@ export function ContactSection() {
       link: "tel:+919900797419",
     },
     {
+      icon: Phone,
+      title: "Call Us",
+      content: "+91 90089 10419",
+      link: "tel:+919008910419",
+    },
+    {
       icon: Mail,
       title: "Email Us",
       content: "info@hosamaneproperties.com",
@@ -72,7 +78,7 @@ export function ContactSection() {
             Let&apos;s Find Your <span className="text-gold-gradient">Dream Home</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Ready to start your property journey? Contact us today for a personalized consultation
+            Share your requirements and Manjunath will get back to you with tailored property options, honest pricing, and a no-pressure consultation
           </p>
         </motion.div>
 

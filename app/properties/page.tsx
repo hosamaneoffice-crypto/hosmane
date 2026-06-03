@@ -160,13 +160,16 @@ export default function PropertiesPage() {
                     </p>
 
                     {/* CTA Button */}
-                    <motion.button
+                    <motion.a
+                      href={`https://wa.me/919900797419?text=${encodeURIComponent(`Hello Manjunath! I'm interested in the property: ${property.title} at ${property.location} (${property.area}, ${property.price}). Please share more details.`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all"
+                      className="w-full py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all text-center block"
                     >
-                      View Details
-                    </motion.button>
+                      Enquire Now
+                    </motion.a>
                   </div>
                 </motion.div>
               ))}
