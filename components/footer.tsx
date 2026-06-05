@@ -90,12 +90,12 @@ export function Footer() {
                   </div>
                 </motion.a>
                 <motion.a
-                  href="mailto:info@hosamaneproperties.com"
+                  href="mailto:hosmaneproperties@gmail.com"
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Mail className="w-4 h-4 flex-shrink-0" />
-                  <span>info@hosamaneproperties.com</span>
+                  <span>hosmaneproperties@gmail.com</span>
                 </motion.a>
                 <motion.div
                   whileHover={{ x: 5 }}

@@ -71,8 +71,8 @@ export function ContactSection() {
     {
       icon: Mail,
       title: "Email Us",
-      content: "info@hosamaneproperties.com",
-      link: "mailto:info@hosamaneproperties.com",
+      content: "hosmaneproperties@gmail.com",
+      link: "mailto:hosmaneproperties@gmail.com",
       numbers: undefined,
     },
     {
