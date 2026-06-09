@@ -57,7 +57,7 @@ export function IntroReveal() {
             >
               <Image
                 src="/images/transparent-white-logo.png"
-                alt="Hoshamane Properties"
+                alt="Hosamane Properties"
                 fill
                 priority
                 sizes="144px"
@@ -72,7 +72,7 @@ export function IntroReveal() {
                 transition={{ duration: 0.9, delay: 0.55 }}
                 className="text-xs font-semibold uppercase text-primary"
               >
-                Hoshamane Properties
+                Hosamane Properties
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 8 }}

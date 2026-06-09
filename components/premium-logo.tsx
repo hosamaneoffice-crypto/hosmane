@@ -32,7 +32,7 @@ export function PremiumLogo() {
         >
           <Image
             src="/images/transparent-white-logo.png"
-            alt="Hoshamane Properties"
+            alt="Hosamane Properties"
             fill
             priority
             sizes="56px"
@@ -61,7 +61,7 @@ export function PremiumLogo() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <h1 className="text-sm font-semibold text-foreground leading-tight">
-            <span className="block">HOSHAMANE</span>
+            <span className="block">HOSAMANE</span>
             <span className="block text-xs font-light text-primary">PROPERTIES</span>
           </h1>
         </motion.div>

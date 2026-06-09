@@ -285,7 +285,7 @@ export function ContactSection() {
               className="rounded-xl overflow-hidden border border-border/30 h-52 sm:h-64 flex-1 min-h-[200px]"
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.3478507506!2d77.56830931482188!3d12.872476690906584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6a8c0c5c0c01%3A0x0!2sHimagiri%20Meadows%2C%20Gottigere%2C%20Bengaluru%2C%20Karnataka%20560076!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                src="https://maps.google.com/maps?q=Himagiri+Meadows+Gottigere+Bengaluru+560076&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0, filter: "invert(0.9) hue-rotate(180deg)" }}

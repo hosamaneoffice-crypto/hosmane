@@ -103,7 +103,7 @@ export function ColorfulLogo() {
       {/* Text Branding */}
       <div className="hidden sm:flex flex-col gap-0">
         <div className="font-serif font-bold text-lg bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
-          Hoshamane
+          Hosamane
         </div>
         <div className="font-sans text-xs font-medium text-slate-600">
           Properties
